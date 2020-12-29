@@ -16,6 +16,7 @@ app.use(bodyParser.json());
 // mongoose
 let cachedDb = false;
 
+// cached db??
 async function connectToDB() {
     if (cachedDb) {
         return true;
