@@ -11,8 +11,8 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 dayjs.extend(objectSupport);
 
-const token = '1229823290:AAH2TkJlo7f91s3W_WucEpB_RdqlXrCM-ns';
-const bot = new TelegramBot(token);
+const token = process.env.TELEGRAMTOKEN;
+const bot = new TelegramBot(token, {onlyFirstMatch:true});
 
 
 async function add_event(msg, datestr, data, time_zone) {

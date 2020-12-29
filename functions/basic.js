@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const TelegramBot = require('node-telegram-bot-api');
 const geoTz = require('geo-tz');
 const dayjs = require('dayjs');
-const token = '1229823290:AAH2TkJlo7f91s3W_WucEpB_RdqlXrCM-ns';
-const bot = new TelegramBot(token);
+const token = process.env.TELEGRAMTOKEN;
+const bot = new TelegramBot(token, {onlyFirstMatch:true});
 
 
 
