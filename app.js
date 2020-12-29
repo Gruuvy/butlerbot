@@ -38,7 +38,6 @@ const { stringify } = require('querystring');
 const { rejects } = require('assert');
 const token = process.env.TELEGRAMTOKEN;
 const bot = new TelegramBot(token, {onlyFirstMatch:true});
-//bot.setWebHook("https://1ce51628ff78.ngrok.io");
 
 const promises = {};
 
@@ -88,8 +87,6 @@ bot.on("callback_query", async function(data){
     promises[message_id]();
     delete promises[message_id];
 });
-
-
 
 // start
 bot.onText(/\/start(?:@autobutler_bot)?\s?(.+)?/, async (msg, match) => {
